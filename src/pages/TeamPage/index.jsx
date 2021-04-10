@@ -1,5 +1,4 @@
 import React from "react";
-import Ecommerce from "../../components/Ecommerce";
 import Layout from "../../components/Layout";
 import Directors from "../../components/Directors";
 

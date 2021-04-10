@@ -1,6 +1,5 @@
 import React from "react";
 import Courses from "../Courses";
-import Directors from "../Directors";
 import Layout from "../Layout";
 import Banner from "./Banner";
 
