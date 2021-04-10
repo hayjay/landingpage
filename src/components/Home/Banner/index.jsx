@@ -34,21 +34,21 @@ export default function Banner() {
           <div class="carousel-item active" >
             <img src={BannerImage} class="d-block w-100"  alt="..." />
             <div class="carousel-caption  d-block">
-              <h6>WELCOME TO <span style={{fontWeight: 'bolder'}}>MULTIFACET TECHNOLOGIES </span> </h6>
+              <h5>WELCOME TO <span style={{fontWeight: 'bolder'}}>MULTIFACET TECHNOLOGIES </span> </h5>
               <h5 >FOR ALL CISCO PROFESSIONAL TRAINING AND EXAMINATIONS</h5>
               <h6>UK BASED CERTIFICATION</h6>
-              <p>Click here to Register </p>
-              <a class="btn btn-primary" href="/register" role="button">Register</a>
+              {/* <p>Click here to Register </p> */}
+              <a class="btn btn-success" href="/register" role="button">Register</a>
             </div>
           </div>
           <div class="carousel-item">
             <img src={BannerImage} class="d-block w-100" alt="..." />
             <div class="carousel-caption d-md-block">
-              <h6>WELCOME TO <span style={{fontWeight: 'bolder'}}>MULTIFACET TECHNOLOGIES </span> </h6>
+              <h3>WELCOME TO <span style={{fontWeight: 'bolder'}}>MULTIFACET TECHNOLOGIES </span> </h3>
               <h5 >FOR ALL CISCO PROFESSIONAL TRAINING AND EXAMINATIONS</h5>
               <h6>UK BASED CERTIFICATION</h6>
-              <p>Click here to Register </p>
-              <a class="btn btn-primary" href="/register" role="button">Register</a>
+              {/* <p>Click here to Register </p> */}
+              <a class="btn btn-success" href="/register" role="button">Register</a>
 
             </div>
           </div>

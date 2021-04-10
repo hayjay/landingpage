@@ -11,14 +11,14 @@ export default function Directors() {
       <Container>
         <Row>
           <Col md={4}>
-            <Card bg={"primary"} style={{ width: "18rem" }} className="mb-2">
+            <Card bg={"default"} className="mb-2">
               <Card.Header>Director,</Card.Header>
               <Card.Body>
                 <Card.Title>Dr. Imran Adeleke </Card.Title>
                 <Card.Text>Multifacet Technologies</Card.Text>
               </Card.Body>
             </Card>
-            <Card bg={"primary"} style={{ width: "18rem" }} className="mb-2">
+            <Card bg={"default"} className="mb-2">
               <Card.Header>Global Instructor</Card.Header>
               <Card.Body>
                 <Card.Title> Engr. Bolaji Joshua</Card.Title>

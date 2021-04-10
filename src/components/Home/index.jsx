@@ -16,7 +16,6 @@ export default function Home() {
           <hr/>
         </header>
         <Courses />
-        <Directors />
       </article>
     </Layout>
   );
