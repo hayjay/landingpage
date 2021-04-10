@@ -44,7 +44,7 @@ export default function Banner() {
           <div class="carousel-item">
             <img src={BannerImage} class="d-block w-100" alt="..." />
             <div class="carousel-caption d-md-block">
-              <h3>WELCOME TO <span style={{fontWeight: 'bolder'}}>MULTIFACET TECHNOLOGIES </span> </h3>
+              <h5>WELCOME TO <span style={{fontWeight: 'bolder'}}>MULTIFACET TECHNOLOGIES </span> </h5>
               <h5 >FOR ALL CISCO PROFESSIONAL TRAINING AND EXAMINATIONS</h5>
               <h6>UK BASED CERTIFICATION</h6>
               {/* <p>Click here to Register </p> */}
