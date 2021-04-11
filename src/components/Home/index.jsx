@@ -1,6 +1,5 @@
 import React from "react";
 import Courses from "../Courses";
-import Directors from "../Directors";
 import Layout from "../Layout";
 import Banner from "./Banner";
 
@@ -15,8 +14,12 @@ export default function Home() {
           <h1 id="courses">Courses</h1>
           <hr/>
         </header>
+<<<<<<< HEAD
         <Courses /> 
        <Directors />
+=======
+        <Courses />
+>>>>>>> 423c054b338c9fce7783890141e6f40e31ec074f
       </article>
     </Layout>
   );

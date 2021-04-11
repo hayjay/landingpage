@@ -3,7 +3,8 @@ import { Col, Container, Row } from "react-bootstrap";
 import Cards from "../Cards";
 import INT from  "../../static/images/INT.jpeg"
 import swr from "../../static/images/swr.jpeg"
-import NE from "../../static/images/NE.jpeg";
+import NE from "../../static/images/networking.jpeg";
+import ANE from "../../static/images/advanced_networking.jpeg";
 import python from "../../static/images/python.jpeg";
 import c from "../../static/images/c.png"
 import cpp from "../../static/images/cpp.png"
@@ -14,7 +15,14 @@ import ent from "../../static/images/ent.jpeg"
 
 
 export const courses = [
+<<<<<<< HEAD
   { name: "Networking Essentials", image: NE },
+=======
+  { 
+    name: "Networking Essentials", 
+    image: NE 
+  },
+>>>>>>> 423c054b338c9fce7783890141e6f40e31ec074f
   {
     name: "CCNA1v7: Introduction to Networking (ITN)",
     image: INT,
@@ -33,7 +41,7 @@ export const courses = [
   },
   {
     name: "CCNP Enterprise: Core Networking (ENCOR)",
-    image: NE,
+    image: ANE,
   },
   {
     name: "PCAP: Programming Essentials in Python",

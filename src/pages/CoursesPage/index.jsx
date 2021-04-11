@@ -4,7 +4,9 @@ import Courses from '../../components/Courses'
 export default function CoursesPage() {
     return (
         <div>
-            <Courses />
+            <article className="container">
+                <Courses />
+            </article>
         </div>
     )
 }
