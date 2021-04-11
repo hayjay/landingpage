@@ -35,7 +35,7 @@ export default function Ecommerce() {
       <Row>
         {ecoms.map((ecom, index) => (
           <Col md={4}>
-            <Cards title={ecom.name} image={ecom.image} />
+            <Cards title={ecom.name} image={ecom.image ? ecom.image : ""} />
           </Col>
         ))}
       </Row>

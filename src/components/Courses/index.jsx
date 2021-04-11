@@ -14,7 +14,7 @@ import ent from "../../static/images/ent.jpeg"
 
 
 export const courses = [
-  { name: "Networking Essentials", image: "../../static/images/NE.jpeg" },
+  { name: "Networking Essentials", image: NE },
   {
     name: "CCNA1v7: Introduction to Networking (ITN)",
     image: INT,
@@ -79,7 +79,7 @@ export default function Courses() {
       <Row>
         {courses.map((course, index) => (
           <Col md={4}>
-            <Cards title={course.name} image={course.image} />
+            <Cards title={course.name} image={course.image ? course.image : ""} />
           </Col>
         ))}
       </Row>

@@ -15,8 +15,8 @@ export default function Home() {
           <h1 id="courses">Courses</h1>
           <hr/>
         </header>
-        <Courses />
-        <Directors />
+        <Courses /> 
+       <Directors />
       </article>
     </Layout>
   );

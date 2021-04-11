@@ -2,6 +2,9 @@ import React from "react";
 import { Card } from "react-bootstrap";
 
 export default function Cards({ image, title }) {
+  if(!image) {
+    return
+  }
   return (
       <Card className="mr-3 mb-3">
         <Card.Img variant="top" src={image} />

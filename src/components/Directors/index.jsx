@@ -1,13 +1,12 @@
 import React from "react";
 import {Card, Col, Container, Row } from "react-bootstrap";
-// import ProfileCard from "../ProfileCard";
 
 export default function Directors() {
   return (
     <div style={{ marginTop: "2rem" }}>
       <hr />
       <h2>Directors</h2>
-      {/* <ProfileCard /> */}
+      
       <Container>
         <Row>
           <Col md={4}>
