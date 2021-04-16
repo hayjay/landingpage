@@ -1,6 +1,8 @@
 import React from "react";
+import { useMutation } from "react-query";
+import axios from "../../utils/axios";
 
-export const courses = [
+const courses = [
   { name: "Networking Essentials", value: "Networking Essentials" },
   {
     name: "CCNA1v7: Introduction to Networking (ITN)",
@@ -61,80 +63,148 @@ export const courses = [
 ];
 
 export default function Register() {
+  const [lastName, setLastName] = React.useState("");
+  const [surname, setSurname] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [phoneNumber, setPhoneNumber] = React.useState("");
+  const [course, setCourse] = React.useState("");
+  const [success, setSuccess] = React.useState(false);
+  const [error, setError] = React.useState(false);
+  const [errMsg, setErrMsg] = React.useState(false)
+
+  const mutateRegistration = useMutation(
+    (user) => axios.post("/create", user),
+    {
+      onSuccess: () => {
+        setSuccess(true);
+      },
+      onError: (e) => {
+        setErrMsg(e.response.data.error)
+        setError(true);
+      },
+    }
+  );
+
+  const register = (e) => {
+    setError(false)
+    e.preventDefault();
+    const user = {
+      lastName,
+      surname,
+      email,
+      phoneNumber,
+      course,
+    };
+
+    console.log(mutateRegistration.isLoading);
+    mutateRegistration.mutate(user)
+  };
   return (
     <div className="container">
       <header style={{ margin: " 2rem 0 2rem 0" }}>
         <h2>Register</h2>
       </header>
-      <form>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
-            Last Name
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="John"
-          />
+      {error ? (
+        <div class="alert alert-danger" role="alert">
+          {errMsg}
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput2" class="form-label">
-            Surname
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            id="exampleFormControlInput2"
-            placeholder="Torvald"
-          />
+      ) : null}
+      {success ? (
+        <div class="alert alert-success" role="alert">
+          Successfully Registered
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput3" class="form-label">
-            Phone Number
-          </label>
-          <input
-            type="number"
-            class="form-control"
-            id="exampleFormControlInput3"
-            placeholder="0813438****"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleFormControlInput4" class="form-label">
-            Courses
-          </label>
-          <select
-            id="exampleFormControlInput4"
-            class="form-select"
-            aria-label="Default select example"
-          >
-            <option selected>Open this select menu</option>
-            {courses.map((course, index) => (
-              <option key={index} value={course.value}>{course.name}</option>
-            ))}
-            {/* <option value="1">One</option>
+      ) : (
+        <form onSubmit={register}>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">
+              Last Name
+            </label>
+            <input
+              required
+              type="text"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="John"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">
+              Surname
+            </label>
+            <input
+              required
+              value={surname}
+              onChange={(e) => setSurname(e.target.value)}
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput2"
+              placeholder="Torvald"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput3" class="form-label">
+              Phone Number
+            </label>
+            <input
+              required
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              type="number"
+              class="form-control"
+              id="exampleFormControlInput3"
+              placeholder="0813438****"
+            />
+          </div>
+          <div className="mb-3">
+            <label for="exampleFormControlInput4" class="form-label">
+              Courses
+            </label>
+            <select
+              required
+              value={course}
+              onChange={(e) => setCourse(e.target.value)}
+              id="exampleFormControlInput4"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option>Open this select menu</option>
+              {courses.map((course, index) => (
+                <option key={index} value={course.value}>
+                  {course.name}
+                </option>
+              ))}
+              {/* <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option> */}
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput5" class="form-label">
-            Email address
-          </label>
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput5"
-            placeholder="john@gmail.com"
-          />
-        </div>
-        <div className="" style={{ float: "right" }}>
-          <button type="submit" class="btn btn-primary">
-            Register
-          </button>
-        </div>
-      </form>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput5" class="form-label">
+              Email address
+            </label>
+            <input
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="email"
+              class="form-control"
+              id="exampleFormControlInput5"
+              placeholder="john@gmail.com"
+            />
+          </div>
+          <div className="" style={{ float: "right" }}>
+            <button
+              disabled={mutateRegistration.isLoading}
+              type="submit"
+              class="btn btn-primary"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+      )}
     </div>
   );
 }

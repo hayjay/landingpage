@@ -31,40 +31,20 @@ export default function Navbar() {
               </li>
               <li class="nav-item">
                 <NavLink class="nav-link" to="/about">
-<<<<<<< HEAD
-                  About the Company
-=======
                   About Us
->>>>>>> 423c054b338c9fce7783890141e6f40e31ec074f
                 </NavLink>
               </li>
               <li class="nav-item">
                 <NavLink class="nav-link" to="/services">
-<<<<<<< HEAD
-                  Our Services
-=======
                   Our Services & Courses
->>>>>>> 423c054b338c9fce7783890141e6f40e31ec074f
                 </NavLink>
               </li>
               
               <li class="nav-item">
-<<<<<<< HEAD
-                <NavLink class="nav-link" to="/#courses">
-                  Courses
-                </NavLink>
-              </li>
-              <li class="nav-item">
-                <NavLink class="nav-link" to="#contact">
-                  Contact
-                </NavLink>
-              </li>
-=======
                 <NavLink class="nav-link" to="/our-team">
                   Our Team
                 </NavLink>
               </li>
->>>>>>> 423c054b338c9fce7783890141e6f40e31ec074f
             </ul>
           </div>
         </div>
