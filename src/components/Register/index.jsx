@@ -1,6 +1,7 @@
 import React from "react";
 import { useMutation } from "react-query";
 import axios from "../../utils/axios";
+import { Link, NavLink } from "react-router-dom";
 
 const courses = [
   { name: "Networking Essentials", value: "Networking Essentials" },
@@ -111,7 +112,7 @@ export default function Register() {
       ) : null}
       {success ? (
         <div class="alert alert-success" role="alert">
-          Successfully Registered
+          Registered Successful, Thank you for choosing Multifacet Technologies. <Link to="/">Back to Home Page</Link> 
         </div>
       ) : (
         <form onSubmit={register}>
