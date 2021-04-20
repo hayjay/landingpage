@@ -1,7 +1,7 @@
 import React from "react";
 import { useMutation } from "react-query";
 import axios from "../../utils/axios";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const courses = [
   { name: "Networking Essentials", value: "Networking Essentials" },
