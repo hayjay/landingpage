@@ -2,6 +2,7 @@ import React from "react";
 
 import BannerImage from "../../../static/images/hero_1.jpg";
 import './style.css'
+import { Link } from "react-router-dom";
 
 export default function Banner() {
   return (
@@ -38,7 +39,8 @@ export default function Banner() {
               <h5 >FOR ALL CISCO PROFESSIONAL TRAINING AND EXAMINATIONS</h5>
               <h6>UK BASED CERTIFICATION</h6>
               {/* <p>Click here to Register </p> */}
-              <a class="btn btn-success" href="/register" role="button">Register</a>
+              {/* <a class="btn btn-success" href="/register" role="button">Register</a> */}
+              <Link to="/register" class="btn btn-success">REGISTER</Link>
             </div>
           </div>
           <div class="carousel-item">
@@ -48,8 +50,7 @@ export default function Banner() {
               <h5 >FOR ALL CISCO PROFESSIONAL TRAINING AND EXAMINATIONS</h5>
               <h6>UK BASED CERTIFICATION</h6>
               {/* <p>Click here to Register </p> */}
-              <a class="btn btn-success" href="/register" role="button">Register</a>
-
+              <Link to="/register" class="btn btn-success">REGISTER</Link>
             </div>
           </div>
           {/* <div class="carousel-item">
