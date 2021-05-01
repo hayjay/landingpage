@@ -1,14 +1,16 @@
-
+footer{
+    height: 170px;
+}
 .footer {
     position: relative;
-    height: 150px;
     height: 100%;
     width: 100%;
     color: #fff;
-    background-color: #373433;
+    background-color: #002147;
     text-align: center;
     margin-top: 10rem;
     margin-bottom: 0;
+    padding:20px 0;
 }
 
 .footer .content{

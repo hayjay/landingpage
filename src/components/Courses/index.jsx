@@ -4,14 +4,15 @@ import Cards from "../Cards";
 import INT from  "../../static/images/INT.jpeg"
 import swr from "../../static/images/swr.jpeg"
 import NE from "../../static/images/networking.jpeg";
-import ANE from "../../static/images/advanced_networking.jpeg";
-import python from "../../static/images/python.jpeg";
+// import ANE from "../../static/images/advanced_networking.jpeg";
+// import python from "../../static/images/python.jpeg";
 import c from "../../static/images/c.png"
-import cpp from "../../static/images/cpp.png"
+// import cpp from "../../static/images/cpp.png"
 import iot from "../../static/images/iot.jpeg"
 import iot2 from "../../static/images/iot2.jpeg"
 import cyb from "../../static/images/cyb.jpeg"
 import ent from "../../static/images/ent.jpeg"
+import './coursesStyles/style.css'
 
 
 export const courses = [
@@ -37,23 +38,23 @@ export const courses = [
   },
   {
     name: "CCNP Enterprise: Core Networking (ENCOR)",
-    image: ANE,
-  },
-  {
-    name: "PCAP: Programming Essentials in Python",
-    image: python,
+    image: NE 
   },
   {
     name: "CLA: Programming Essential in C",
     image: c,
   },
   {
+    name: "Entrepreneurship",
+    image: ent,
+  },
+  {
     name: "CLP: Advanced Programming in C",
     image: c,
   },
   {
-    name: "CPA: Programming Essentials C++",
-    image: cpp,
+    name: "IoT Fundamentals: Connecting Things",
+    image: iot2,
   },
   {
     name: "Introduction to Internet of Things (IoT)",

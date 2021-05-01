@@ -1,0 +1,101 @@
+
+.bg-blue {
+    background-color: #002147;
+}
+
+/* NAVBAR LOGO  */
+.navbar-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100px;
+    font-size: 1.2rem;
+}
+.multi {
+    padding:0px ;
+}
+
+/* NAVBAR MENU */
+  a.nav-link{
+    color: white !important;
+    font-weight: bold;
+    margin: 10px;
+}
+
+a.nav-link:hover {
+    color: #d5ae0b !important;
+}
+
+.navbar-nav {
+    display: flex;
+    margin-left: auto;
+}
+.nav-item {
+    align-self: center;
+}
+/* .navbar-nav > .active > a {
+    color: #cca509 !important;
+} */
+
+/* ********** NAVBAR REFISTER BUTTON AND GENERAL BUTTON DESIGN ************ */
+.btn {
+    background: #002147;
+    color: white;
+    border: none;
+    padding: 12px 34px;
+    font-size: 14px;
+    border-radius: 1px;
+}
+.nav-register {
+    background: #cca509;
+    color: black;
+    padding: 10px;
+}
+.btn:hover {
+    background: #cca509;
+    color: black;
+}
+.nav-register:hover {
+    border: 2px solid #cca509;
+    color: white !important;
+    background-color: transparent;
+}
+
+/* ************** NAVBAR TOGGLER ************* */
+button.navbar-toggler {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 2rem;
+}
+button.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+.navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background: white;
+}
+
+/* MEDIA QUERIES ************* */
+
+@media (max-width: 400px){
+    .multi {
+        font-size: 1rem;
+        margin: 0 0 0 5px !important;
+    }
+    .nav-brand-img {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    a.navbar-brand {
+        width: 90px;
+    }
+    .nav-register,
+     .btn{
+        padding: 8px 18px;
+        font-size: 12px;
+        margin-bottom: .5rem;
+    }
+}

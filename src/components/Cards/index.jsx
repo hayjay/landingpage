@@ -6,7 +6,7 @@ export default function Cards({ image, title }) {
     return
   }
   return (
-      <Card className="mr-3 mb-3">
+      <Card className="mr-4 mb-4">
         <Card.Img variant="top" src={image} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>

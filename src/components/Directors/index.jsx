@@ -4,14 +4,14 @@ import {Card, Col, Container, Row } from "react-bootstrap";
 export default function Directors() {
   return (
     <div style={{ marginTop: "2rem" }}>
+      <h1>Directors</h1>
       <hr />
-      <h2>Directors</h2>
-      
+
       <Container>
         <Row>
           <Col md={4}>
-            <Card bg={"default"} className="mb-2">
-              <Card.Header>Director,</Card.Header>
+            <Card bg={"default"} className="mb-4">
+              <Card.Header>Director</Card.Header>
               <Card.Body>
                 <Card.Title>Dr. Imran Adeleke </Card.Title>
                 <Card.Text>Multifacet Technologies</Card.Text>

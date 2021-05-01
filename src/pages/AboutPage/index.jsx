@@ -8,7 +8,7 @@ export default function AboutPage() {
         <h1 style={{ marginTop: "2rem" }}>About the Company</h1>
         <hr/>
         {/* <div className="container"> */}
-          <p>
+          <p className="about">
             Multifacet Technologies is a business and Information Technology
             service company. It focuses on various aspects of technologies,
             consulting, training and outsourcing that cut across all strata of
