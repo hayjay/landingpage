@@ -65,7 +65,7 @@ const courses = [
 
 export default function Register() {
   const [lastName, setLastName] = React.useState("");
-  const [surname, setSurname] = React.useState("");
+  const [firstName, setfirstName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [phoneNumber, setPhoneNumber] = React.useState("");
   const [course, setCourse] = React.useState("");
@@ -91,7 +91,7 @@ export default function Register() {
     e.preventDefault();
     const user = {
       lastName,
-      surname,
+      firstName,
       email,
       phoneNumber,
       course,
@@ -118,13 +118,13 @@ export default function Register() {
         <form onSubmit={register}>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">
-              Last Name
+              First Name
             </label>
             <input
               required
               type="text"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
+              value={firstName}
+              onChange={(e) => setfirstName(e.target.value)}
               class="form-control"
               id="exampleFormControlInput1"
               placeholder="John"
@@ -132,12 +132,12 @@ export default function Register() {
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput2" class="form-label">
-              Surname
+              Last Name
             </label>
             <input
               required
-              value={surname}
-              onChange={(e) => setSurname(e.target.value)}
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
               type="text"
               class="form-control"
               id="exampleFormControlInput2"

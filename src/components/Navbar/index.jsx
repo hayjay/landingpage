@@ -5,14 +5,14 @@ import logo from "../../static/images/logo.jpg";
 export default function Navbar() {
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <Link class="navbar-brand" to="/">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/">
             <img style={{width: '50px', height: '40px'}} src={logo} alt=""/>
           </Link>
           
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -20,28 +20,28 @@ export default function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class=" collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <NavLink class="nav-link" aria-current="page" to="/">
+          <div className=" collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="/">
                   Home
                 </NavLink>
               </li>
-              <li class="nav-item">
-                <NavLink class="nav-link" to="/about">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/about">
                   About Us
                 </NavLink>
               </li>
-              <li class="nav-item">
-                <NavLink class="nav-link" to="/services">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/services">
                   Our Services & Courses
                 </NavLink>
               </li>
               
-              <li class="nav-item">
-                <NavLink class="nav-link" to="/our-team">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/our-team">
                   Our Team
                 </NavLink>
               </li>

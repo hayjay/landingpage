@@ -1,0 +1,9 @@
+table thead, table tbody  {
+    border: steelblue 1px solid;
+    border-radius: 10px;
+}
+
+  table thead tr {
+    border-top-left-radius: 35px;
+    border-radius: 15px ;
+}
