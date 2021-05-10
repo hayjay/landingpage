@@ -2,6 +2,7 @@ import React from "react";
 import { useMutation } from "react-query";
 import axios from "../../utils/axios";
 import { Link } from "react-router-dom";
+import "./RegisterStyles/styles.css";
 
 const courses = [
   { name: "Networking Essentials", value: "Networking Essentials" },
@@ -65,7 +66,7 @@ const courses = [
 
 export default function Register() {
   const [lastName, setLastName] = React.useState("");
-  const [surname, setSurname] = React.useState("");
+  const [firstName, setfirstName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [phoneNumber, setPhoneNumber] = React.useState("");
   const [course, setCourse] = React.useState("");
@@ -91,7 +92,7 @@ export default function Register() {
     e.preventDefault();
     const user = {
       lastName,
-      surname,
+      firstName,
       email,
       phoneNumber,
       course,
@@ -104,48 +105,49 @@ export default function Register() {
     <div className="container">
       <header style={{ margin: " 2rem 0 2rem 0" }}>
         <h2>Register</h2>
+        <hr/>
       </header>
       {error ? (
-        <div class="alert alert-danger" role="alert">
+        <div className="alert alert-danger" role="alert">
           {errMsg}
         </div>
       ) : null}
       {success ? (
-        <div class="alert alert-success" role="alert">
+        <div className="alert alert-success" role="alert">
           Registered Successful, Thank you for choosing Multifacet Technologies. <Link to="/">Back to Home Page</Link> 
         </div>
       ) : (
         <form onSubmit={register}>
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">
-              Last Name
+            <label for="exampleFormControlInput1" className="form-label">
+              First Name
             </label>
             <input
               required
               type="text"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              class="form-control"
+              value={firstName}
+              onChange={(e) => setfirstName(e.target.value)}
+              className="form-control"
               id="exampleFormControlInput1"
               placeholder="John"
             />
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlInput2" class="form-label">
-              Surname
+            <label for="exampleFormControlInput2" className="form-label">
+              Last Name
             </label>
             <input
               required
-              value={surname}
-              onChange={(e) => setSurname(e.target.value)}
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
               type="text"
-              class="form-control"
+              className="form-control"
               id="exampleFormControlInput2"
               placeholder="Torvald"
             />
           </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput3" class="form-label">
+          <div className="mb-3">
+            <label for="exampleFormControlInput3" className="form-label">
               Phone Number
             </label>
             <input
@@ -153,13 +155,13 @@ export default function Register() {
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
               type="number"
-              class="form-control"
+              className="form-control"
               id="exampleFormControlInput3"
               placeholder="0813438****"
             />
           </div>
           <div className="mb-3">
-            <label for="exampleFormControlInput4" class="form-label">
+            <label for="exampleFormControlInput4" className="form-label">
               Courses
             </label>
             <select
@@ -167,7 +169,7 @@ export default function Register() {
               value={course}
               onChange={(e) => setCourse(e.target.value)}
               id="exampleFormControlInput4"
-              class="form-select"
+              className="form-select"
               aria-label="Default select example"
             >
               <option>Open this select menu</option>
@@ -181,8 +183,8 @@ export default function Register() {
             <option value="3">Three</option> */}
             </select>
           </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput5" class="form-label">
+          <div className="mb-3">
+            <label for="exampleFormControlInput5" className="form-label">
               Email address
             </label>
             <input
@@ -190,7 +192,7 @@ export default function Register() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               type="email"
-              class="form-control"
+              className="form-control"
               id="exampleFormControlInput5"
               placeholder="john@gmail.com"
             />
@@ -199,7 +201,7 @@ export default function Register() {
             <button
               disabled={mutateRegistration.isLoading}
               type="submit"
-              class="btn btn-primary"
+              className="btn btn-primary mt-1"
             >
               Register
             </button>
