@@ -92,7 +92,7 @@ export default function Register() {
     e.preventDefault();
     const user = {
       lastName,
-      firstName,
+      surname : firstName,
       email,
       phoneNumber,
       course,

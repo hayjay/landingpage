@@ -19,7 +19,7 @@ function App() {
         <Route path="/our-team" exact component={TeamPage} />
         <Route path="/contact" exact component={ServicesPage} />
         <Route path="/about" component={AboutPage} />
-        <Route path="/admin" component={AdminPage} />
+        <Route path="/admin/registered-users" component={AdminPage} />
       </Switch>
     </BrowserRouter>
   );
