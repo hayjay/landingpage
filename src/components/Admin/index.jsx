@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 import { useQuery } from "react-query";
 import axios from "../../utils/axios";
 
@@ -24,6 +25,7 @@ function Admin() {
     // console.log(res.data);
   }, [res]);
   return (
+    // <Container>
     <div className="container" style={{marginTop: '1.5rem'}}>
       {error && (
         <div className="alert alert-danger" role="alert">
@@ -33,6 +35,7 @@ function Admin() {
       {res.isLoading ? (
         <div className="container">Loading ...</div>
       ) : (
+        <div className="table-responsive panel panel-default" >
         <table className="table table-bordered" >
           <thead >
             <tr>
@@ -55,8 +58,10 @@ function Admin() {
             ))}
           </tbody>
         </table>
+        </div>
       )}
     </div>
+    // </Container>
   );
 }
 
