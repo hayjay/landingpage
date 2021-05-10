@@ -3,6 +3,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 import Home from "./components/Home";
 import AboutPage from './pages/AboutPage';
+import AdminPage from './pages/AdminPage';
 import RegisterPage from './pages/RegisterPage';
 import ServicesPage from './pages/ServicesPage';
 import TeamPage from './pages/TeamPage';
@@ -18,6 +19,7 @@ function App() {
         <Route path="/our-team" exact component={TeamPage} />
         <Route path="/contact" exact component={ServicesPage} />
         <Route path="/about" component={AboutPage} />
+        <Route path="/admin" component={AdminPage} />
       </Switch>
     </BrowserRouter>
   );
