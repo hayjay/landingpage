@@ -10,7 +10,7 @@ export default function ServicesPage() {
     <Layout>
       <article className="container">
         <header>
-          <h1 style={{marginTop: '2rem'}}> Our Servies</h1>
+          <h1 style={{marginTop: '2rem'}}> Our Services</h1>
           <hr/>
         </header>
         <Services />

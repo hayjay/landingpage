@@ -1,0 +1,35 @@
+form {
+    margin: 30px auto;
+    background: white;
+    text-align: left;
+    border-radius: 10px;
+    padding: 2rem 2rem 5rem 2rem;
+}
+.form-control,
+ .form-select {
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+    border-radius: 0px;
+    
+}
+.form-control:focus,
+.form-select:focus {
+    color: #212529;
+    border-color: #fdc800;
+   box-shadow: none;
+}
+
+label {
+    color: #aaa;
+    display: inline-block;
+    margin: 25px 0 15px;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}

@@ -1,0 +1,25 @@
+.card-body {
+    min-height: 130px;
+}
+.card-img-top {
+    min-height: 200px !important;
+}
+.card {
+    border: none;
+    box-shadow: 0px 15px 25px -4px rgba(30,30,60,0.25);
+}
+header{
+    color: #002147;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+h1{
+    color: #002147;
+}
+
+hr {
+    width: 70px;
+    height: 4px !important;
+    background: #fdc800;
+    opacity: 1;
+}
