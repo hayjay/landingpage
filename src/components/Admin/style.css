@@ -1,3 +1,9 @@
+.table-responsive {
+    margin-top: 5rem;
+    /* position: relative; */
+}
+
 table thead, table tbody{
     border:2px solid steelblue;
 }
+

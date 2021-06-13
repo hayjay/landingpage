@@ -1,5 +1,6 @@
 import React from 'react'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {QueryClientProvider, QueryClient} from 'react-query'
 
 import Home from "./components/Home";
 import AboutPage from './pages/AboutPage';
@@ -10,7 +11,10 @@ import TeamPage from './pages/TeamPage';
 
 
 function App() {
+  const queryClient = new QueryClient()
+
   return (
+    <QueryClientProvider client={queryClient}>
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
@@ -22,6 +26,7 @@ function App() {
         <Route path="/admin/registered-users" component={AdminPage} />
       </Switch>
     </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 

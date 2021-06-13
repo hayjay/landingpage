@@ -3,17 +3,21 @@ import { Link, NavLink } from "react-router-dom";
 import "./NavbarStyle/style.css";
 import logo from "../../static/images/logo.jpg";
 
-
 export default function Navbar() {
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-blue" >
-        <div class="container">
-          <Link className="navbar-brand" to="/">
-            <img style={{width: '40px', height: '40px'}} src={logo} class="nav-brand-img" alt=""/>
-            <NavLink class="nav-link multi" to="/">
-                  MULTIFACET
-                </NavLink>
+      <nav className="navbar navbar-expand-lg bg-blue">
+        <div className="container">
+          <Link className="navbar-brand nav-link" to="/">
+            <span>
+              <img
+                style={{ width: "40px", height: "40px" }}
+                src={logo}
+                className="nav-brand-img"
+                alt=""
+              />
+              MULTIFACET
+            </span>
           </Link>
 
           <button
@@ -25,37 +29,38 @@ export default function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class=" collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav" variant="tabs" defaultActiveKey="/">
-              <li class="nav-item active">
+          <div className=" collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav" variant="tabs">
+              <li className="nav-item active">
                 <NavLink className="nav-link home" aria-current="page" to="/">
                   HOME
                 </NavLink>
               </li>
-              <li class="nav-item">
-                <NavLink class="nav-link" to="/about">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/about">
                   ABOUT US
                 </NavLink>
               </li>
-              <li class="nav-item">
-                <NavLink class="nav-link" to="/services">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/services">
                   OUR SERVICES & COURSES
                 </NavLink>
               </li>
-              
-              <li class="nav-item">
-                <NavLink class="nav-link" to="/our-team">
+
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/our-team">
                   OUR TEAM
                 </NavLink>
               </li>
-              <li class="nav-item">
-                <Link to="/register" class="btn btn-success nav-register">REGISTER NOW</Link>
-
-              </li>   
+              <li className="nav-item">
+                <Link to="/register" className="btn btn-success nav-register">
+                  REGISTER NOW
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

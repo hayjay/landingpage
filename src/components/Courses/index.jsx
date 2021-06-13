@@ -83,8 +83,8 @@ export default function Courses() {
     <Container fluid>
       <Row>
         {courses.map((course, index) => (
-          <Col md={4}>
-            <Cards title={course.name} image={course.image ? course.image : ""} />
+          <Col key={index} md={4}>
+            <Cards key={index} title={course.name} image={course.image ? course.image : ""} />
           </Col>
         ))}
       </Row>

@@ -1,0 +1,37 @@
+.actions{
+    right: 2rem;
+    top: 7rem;
+    position: absolute;
+}
+
+.actions h5{
+    margin-right: .8rem;
+    bottom: -6px;
+    position: relative;
+}
+
+button {
+    user-select: none;
+    border-radius: 4rem;
+    font-size: 12px;
+    margin: 0px 5px 0 0;
+    padding: 5px;
+    transition: .8s;
+    color: #fff;
+}
+.buttons button:first-child {
+    background-color: #cca509;
+    border: 1px solid #cca509;
+
+}
+.buttons a button:nth-child(1) {
+    background-color: #002147;
+    border: 1px solid #002147;
+}
+.buttons button:hover{
+    background-color: #fff;
+    color: initial;
+}
+.buttons a button:nth-child(1):hover {
+    background-color: #fff;
+}

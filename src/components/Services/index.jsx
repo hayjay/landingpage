@@ -31,8 +31,8 @@ export default function Services() {
     <Container fluid>
       <Row>
         {services.map((service, index) => (
-          <Col md={4}>
-            <Cards title={service.name} image={service.image} />
+          <Col key={index} md={4}>
+            <Cards key={index} title={service.name} image={service.image} />
           </Col>
         ))}
       </Row>

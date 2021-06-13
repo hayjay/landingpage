@@ -34,7 +34,7 @@ export default function Ecommerce() {
     <Container fluid>
       <Row>
         {ecoms.map((ecom, index) => (
-          <Col md={4}>
+          <Col key={index} md={4}>
             <Cards title={ecom.name} image={ecom.image ? ecom.image : ""} />
           </Col>
         ))}

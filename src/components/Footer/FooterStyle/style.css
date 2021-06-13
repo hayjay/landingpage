@@ -1,20 +1,17 @@
-footer{
-    height: 170px;
-}
 .footer {
+    height: 150px;
     position: relative;
-    height: 100%;
     width: 100%;
     color: #fff;
     background-color: #002147;
     text-align: center;
-    margin-top: 10rem;
-    margin-bottom: 0;
+    margin-top: 5rem;
+    bottom: 0;
     padding:20px 0;
 }
 
 .footer .content{
-    top: 2rem;
+    /* top: 2rem; */
 }
 
 .footer small {

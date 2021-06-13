@@ -1,9 +1,10 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+// import { Container } from "react-bootstrap";
 import { useQuery } from "react-query";
-import axios from "../../utils/axios";
+import axios from "../../helpers/axios";
+import Actions from "./Actions";
 
-import './style.css'
+import "./style.css";
 
 function Admin() {
   const [error, setError] = React.useState("");
@@ -26,7 +27,7 @@ function Admin() {
   }, [res]);
   return (
     // <Container>
-    <div className="container" style={{marginTop: '1.5rem'}}>
+    <div className="container" style={{ marginTop: "1.5rem" }}>
       {error && (
         <div className="alert alert-danger" role="alert">
           {error}
@@ -35,30 +36,33 @@ function Admin() {
       {res.isLoading ? (
         <div className="container">Loading ...</div>
       ) : (
-        <div className="table-responsive panel panel-default" >
-        <table className="table table-bordered" >
-          <thead >
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Full Names</th>
-              <th scope="col">Emails</th>
-              <th scope="col">Courses</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map((user, index) => (
-              <tr key={index}>
-                <th scope="row">{index+1}</th>
-                <td>
-                  {user.firstName} {user.lastName}
-                </td>
-                <td>{user.email}</td>
-                <td>{user.course}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        </div>
+        <>
+          {users && <Actions users={users} />}
+          <div className="table-responsive panel panel-default">
+            <table className="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">S/N</th>
+                  <th scope="col">Full Names</th>
+                  <th scope="col">Emails</th>
+                  <th scope="col">Courses</th>
+                </tr>
+              </thead>
+              <tbody>
+                {users.map((user, index) => (
+                  <tr key={index}>
+                    <th scope="row">{index + 1}</th>
+                    <td>
+                      {user.firstName} {user.lastName}
+                    </td>
+                    <td>{user.email}</td>
+                    <td>{user.course}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
       )}
     </div>
     // </Container>

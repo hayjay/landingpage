@@ -1,6 +1,6 @@
 import React from "react";
 import { useMutation } from "react-query";
-import axios from "../../utils/axios";
+import axios from "../../helpers/axios";
 import { Link } from "react-router-dom";
 import "./RegisterStyles/styles.css";
 
