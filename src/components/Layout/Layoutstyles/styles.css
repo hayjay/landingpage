@@ -1,4 +1,12 @@
 .about {
-    height: max-content;
-    width: 80%;
+  height: max-content;
+  width: 80%;
+}
+main {
+    overflow: auto;
+    padding-bottom: 20%;
+}
+footer {
+  /* margin-top: -60px; */
+  bottom: 0;
 }

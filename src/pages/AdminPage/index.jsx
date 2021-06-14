@@ -1,15 +1,15 @@
-import React from 'react'
-import Admin from '../../components/Admin'
-import Layout from '../../components/Layout'
+import React from "react";
+import Admin from "../../components/Admin";
+import Layout from "../../components/Layout";
 
 function AdminPage() {
-    
-    return (
-        <Layout>
-            {/* <h3>Actions: </h3> */}
-            <Admin />
-        </Layout>
-    )
+  return (
+    <Layout>
+      <article>
+        <Admin />
+      </article>
+    </Layout>
+  );
 }
 
 export default AdminPage;

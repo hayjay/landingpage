@@ -1,5 +1,5 @@
 import React from "react";
-// import { Container } from "react-bootstrap";
+import {FaSyncAlt} from 'react-icons/fa'
 import { useQuery } from "react-query";
 import axios from "../../helpers/axios";
 import Actions from "./Actions";
@@ -34,10 +34,10 @@ function Admin() {
         </div>
       )}
       {res.isLoading ? (
-        <div className="container">Loading ...</div>
+        <div className="loading"><i> <FaSyncAlt /></i></div>
       ) : (
         <>
-          {users && <Actions users={users} />}
+          {users && <div style={{position: 'relative'}}> <Actions users={users} /> </div>}
           <div className="table-responsive panel panel-default">
             <table className="table table-bordered">
               <thead>

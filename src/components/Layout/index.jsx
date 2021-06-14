@@ -1,14 +1,14 @@
 import React from "react";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
-import "./Layoutstyles/styles.css"
+import "./Layoutstyles/styles.css";
 
 function Layout(props) {
   return (
     <>
       <Navbar />
-      {props.children} 
-      <footer >
+      <main>{props.children}</main>
+      <footer id="footer">
         <Footer />
       </footer>
     </>
